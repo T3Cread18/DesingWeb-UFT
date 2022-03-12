@@ -32,23 +32,27 @@
             <tr>
                 <td>Bando:</td>
                 <td> 
-                    <input type="radio" name="bando"> Fuerzas Armadas Ucranianas 
-                    <input type="radio" name="bando"> Fuerzas Armadas Rusas
-                    <input type="radio" name="bando"> Civil
-                    <input type="radio" name="bando"> No Determinado
-                </td>
-            </tr>
-            
-            <tr>
-                <td>Estado:</td>
-                <td> 
-                    <input type="radio" name="estado"> Muerto en Combate
-                    <input type="radio" name="estado"> Desaparecido en Combate
-                    <input type="radio" name="estado"> Desertor
-                    <input type="radio" name="estado"> No Determinado
+                    <select name="bando">
+                        <option value="">Fuerzas Armadas Ucranianas</option>
+                        <option value="">Fuerzas Armadas Rusas</option>
+                        <option value="">Civil</option>
+                        <option value="">No Determinado</option>
+                    </select>
                 </td>
             </tr>
 
+            <tr>
+                <td>Estado:</td>
+                <td> 
+                    <select name="estado">
+                        <option value="">Muerto en Combate</option>
+                        <option value="">Desaparecido en Combate</option>
+                        <option value="">Desertor</option>
+                        <option value="">No Determinado</option>
+                    </select>
+                </td>
+            </tr>
+            
             <tr>
                 <td>
                     <input type="submit" value="Añadir" name="añadir">
