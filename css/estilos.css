@@ -1,16 +1,17 @@
 :root {
+    --pastel: #F2E8DC;
     --blanco: #ffffff;
     --negro: #212121;
     --verde: #37f103;
     --rojo: #eb0f0f;
-    --amarillo: #b8e90a;
+    --barra: #0b3552;
     --azul: #0d09fd;
 }
 html{
     font-size: 62.5%;
 }
 body{
-    background: #F2E8DC;
+    background: var(--pastel);
     font-size: 16px;
     font-family: 'Krub', sans-serif;
 }
@@ -19,15 +20,26 @@ h1 {
     font-size: 2em;
 }
 .navegacion-principal {
-    color: var(--blanco);
     text-align: center;
     font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
 }
 .contenedor {
     width: 120rem;
     margin: 0 auto 3rem auto;
-    padding: 1rem;
 }
 .nav-bg {
-    background-color: var(--amarillo);
+    background-color: var(--barra);
+}
+.navegacion-principal a:hover {
+    background-color: var(--azul);
+    color: var(--negro);
 }
