@@ -5,50 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="formulario">
     <form action="formulario.php" method="post">
+
+        <h2>Datos del Cuerpo</h2>
         <table>
+
             <tr>
-                <td>Nombre:</td>
-                <td> <input type="text" placeholder="Nombre del soldado" name="nombre"></td>
+                <td> <input type="text" placeholder="Nombre" name="nombre" required></td>
             </td>
+
             </tr>
-                <td>Apellido:</td>
-                <td> <input type="text" placeholder="Apellido del soldado" name="apellido"></td>
+                <td> <input type="text" placeholder="Apellido" name="apellido" required></td>
+            
             <tr>
-                <td>Edad:</td>
-                <td> <input type="number" step="1" pattern="\d+" min="18" max="99" name="edad"></td>
+                <td> <input type="number" placeholder="Edad" step="1" pattern="\d+" min="18" max="99" name="edad"></td>
             </tr>
+            
             <tr>
-                <td>Genero:</td>
                 <td> 
-                    <input type="radio" name="genero"> Masculino
-                    <input type="radio" name="genero"> Femenino
-                    <input type="radio" name="genero"> No Determinado
+                    <input type="radio" id="masculino" name="genero" value="Maculino" required>
+                    <label for="masculino">Maculino</label><br>
+                    <input type="radio" id="femenino" name="genero" value="Femenino" required>
+                    <label for="femenino">Femenino</label><br>
+                    <input type="radio" id="no determinado" name="genero" value="No Determinado" required>
+                    <label for="no determinado">No Determinado</label>
                 </td>
             </tr>
 
             <tr>
-                <td>Bando:</td>
-                <td> 
-                    <select name="bando">
-                        <option value="">Fuerzas Armadas Ucranianas</option>
-                        <option value="">Fuerzas Armadas Rusas</option>
-                        <option value="">Civil</option>
-                        <option value="">No Determinado</option>
+                
+                <td>
+                    <p>Bando:</p> 
+                    <select class="selector" name="bando" required>
+                        <option value="uc">Fuerzas Armadas Ucranianas</option>
+                        <option value="rs">Fuerzas Armadas Rusas</option>
+                        <option value="cv">Civil</option>
+                        <option value="nd">No Determinado</option>
                     </select>
                 </td>
             </tr>
 
             <tr>
-                <td>Estado:</td>
                 <td> 
-                    <select name="estado">
-                        <option value="">Muerto en Combate</option>
-                        <option value="">Desaparecido en Combate</option>
-                        <option value="">Desertor</option>
-                        <option value="">No Determinado</option>
+                    <p>Estado:</p> 
+                    <select class="selector" name="estado">
+                        <option value="mc">Muerto en Combate</option>
+                        <option value="dc">Desaparecido en Combate</option>
+                        <option value="desertor">Desertor</option>
+                        <option value="nd">No Determinado</option>
                     </select>
                 </td>
             </tr>
@@ -59,8 +67,8 @@
                 </td>
             </tr>
 
-        
         </table>
     </form>
+    </div>
 </body>
 </html>
