@@ -43,3 +43,8 @@ h1 {
     background-color: var(--azul);
     color: var(--negro);
 }
+
+.hero {
+    background-image: url(../img/guerra.jpg);
+    padding: 1rem 0rem 10rem 0rem;
+}
