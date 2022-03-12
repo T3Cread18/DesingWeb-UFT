@@ -10,6 +10,7 @@ html{
     font-size: 62.5%;
 }
 body{
+    background: #F2E8DC;
     font-size: 16px;
     font-family: 'Krub', sans-serif;
 }
@@ -18,14 +19,14 @@ h1 {
     font-size: 2em;
 }
 .navegacion-principal {
-    
+    color: var(--blanco);
     text-align: center;
     font-size: 3rem;
-    font-family: 'Patrick Hand', cursive;
 }
 .contenedor {
     width: 120rem;
     margin: 0 auto 3rem auto;
+    padding: 1rem;
 }
 .nav-bg {
     background-color: var(--amarillo);
