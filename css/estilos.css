@@ -5,9 +5,6 @@
     --rojo: #eb0f0f;
     --amarillo: #b8e90a;
     --azul: #0d09fd;
-
-
-
 }
 html{
     font-size: 62.5%;
@@ -20,8 +17,16 @@ h1 {
     text-align: center;
     font-size: 2em;
 }
-.centrales {
+.navegacion-principal {
+    
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: 'Patrick Hand', cursive;
+}
+.contenedor {
+    width: 120rem;
+    margin: 0 auto 3rem auto;
+}
+.nav-bg {
+    background-color: var(--amarillo);
 }
