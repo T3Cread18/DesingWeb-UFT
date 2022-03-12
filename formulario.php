@@ -28,6 +28,7 @@ if(!empty($nombre) || !empty($apellido) || !empty($genero) ||
         $stmt ->execute();
         echo "DATOS AGREGADOS CON EXITO.";
     }
+    $stmt->close();
 
 }
 
