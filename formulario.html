@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="formulario.php" method="post">
+        <table>
+            <tr>
+                <td>Nombre:</td>
+                <td> <input type="text" placeholder="Nombre del soldado" name="nombre"></td>
+            </td>
+            </tr>
+                <td>Apellido:</td>
+                <td> <input type="text" placeholder="Apellido del soldado" name="apellido"></td>
+            <tr>
+                <td>Edad:</td>
+                <td> <input type="number" step="1" pattern="\d+" min="18" max="99" name="edad"></td>
+            </tr>
+            <tr>
+                <td>Genero:</td>
+                <td> 
+                    <input type="radio" name="genero"> Masculino
+                    <input type="radio" name="genero"> Femenino
+                    <input type="radio" name="genero"> No Determinado
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bando:</td>
+                <td> 
+                    <input type="radio" name="bando"> Fuerzas Armadas Ucranianas 
+                    <input type="radio" name="bando"> Fuerzas Armadas Rusas
+                    <input type="radio" name="bando"> Civil
+                    <input type="radio" name="bando"> No Determinado
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Estado:</td>
+                <td> 
+                    <input type="radio" name="estado"> Muerto en Combate
+                    <input type="radio" name="estado"> Desaparecido en Combate
+                    <input type="radio" name="estado"> Desertor
+                    <input type="radio" name="estado"> No Determinado
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Añadir" name="añadir">
+                </td>
+            </tr>
+
+        
+        </table>
+    </form>
+</body>
+</html>
