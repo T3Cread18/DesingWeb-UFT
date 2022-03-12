@@ -1,3 +1,27 @@
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --verde: #37f103;
+    --rojo: #eb0f0f;
+    --amarillo: #b8e90a;
+    --azul: #0d09fd;
+
+
+
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+}
 h1 {
-text-align: center;
-    }
+    text-align: center;
+    font-size: 2em;
+}
+.centrales {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Patrick Hand', cursive;
+}
