@@ -7,6 +7,7 @@ html{
     color: rgb(29, 28, 28);
     font-family: 'Krub', sans-serif;
 }
+}
 h2 {
     margin: 2rem 0rem 3rem 10rem;
 }
@@ -22,6 +23,9 @@ h2 {
     transform: translate(-50%, -20%);
     background-color: rgba(241, 196, 242 .8);
     color: white;
+    -webkit-box-shadow: -7px 13px 60px -4px rgba(95,99,22,1);
+-moz-box-shadow: -7px 13px 60px -4px rgba(95,99,22,1);
+box-shadow: -7px 13px 60px -4px rgba(95,99,22,1);
 }
 .form{
     color: #F25835;

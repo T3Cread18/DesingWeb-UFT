@@ -9,6 +9,7 @@
     --paleta1: #79BAF2;
     --paleta2: #D9A74A;
 }
+
 html{
     font-size: 62.5%;
     box-sizing: border-box;
@@ -20,6 +21,7 @@ body{
     background: var(--pastel);
     font-size: 16px;
     font-family: 'Krub', sans-serif;
+    background: rgba(252,234,187,1);
 }
 h1 {
     text-align: center;
