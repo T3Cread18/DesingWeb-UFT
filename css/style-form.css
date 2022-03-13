@@ -7,9 +7,12 @@ html{
     color: rgb(29, 28, 28);
     font-family: 'Krub', sans-serif;
 }
+h2 {
+    margin: 2rem 0rem 3rem 10rem;
+}
 .formulario{
     width: 430px;
-    background: #F1C4F2;
+    background: #998199;
     padding: 12px 20px;
     box-sizing: border-box;
     border-radius: 5px;
@@ -17,8 +20,16 @@ html{
     left: 50%;
     top: 30%;
     transform: translate(-50%, -20%);
+    background-color: rgba(241, 196, 242 .8);
+    color: white;
 }
-
+.form{
+    color: #F25835;
+    font-size: 3rem;
+    margin: 2rem 0rem 2rem 18rem;
+    font-weight: 700
+    
+}
 input[type= "text" ]{
     width: 150%;
     background: none;
