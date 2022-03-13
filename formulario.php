@@ -13,19 +13,20 @@ if(!empty($nombre) || !empty($apellido) || !empty($genero) ||
     $host = "localhost";
     $dbusername = "root";
     $dbpassword = "";
-    $dbname = "cuerpos";
+    $dbname = "proyecto";
 
     $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
     if(mysqli_connect_error()){
        die('error de conexion('.mysqli_connect_errno().')'.myslqi_connect_error());
     }
     else{
-        $INSERT="INSERT INTO persona(nombre,apellido,edad,genero,bando,estado)
+        $INSERT="INSERT INTO personas(nombre,apellido,edad,genero,bando,estado)
         values(?,?,?,?,?,?)";
 
         $stmt = $conn->prepare($INSERT);
         $stmt ->bind_param("ssisss", $nombre, $apellido, $edad, $genero, $bando, $estado);
         $stmt ->execute();
+        
         echo "DATOS AGREGADOS CON EXITO.";
     }
     $stmt->close();
