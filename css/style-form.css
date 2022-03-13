@@ -16,7 +16,7 @@
     border-radius: 5px;
     position: fixed;
     left: 50%;
-    top: 20%;
+    top: 30%;
     transform: translate(-50%, -20%);
 }
 
@@ -59,7 +59,7 @@ select[class= "selector" ]{
 
 input[type="submit"]{
     background: #F25835;
-    width: 150%;
+    width: 178%;
     border-radius: 5px;
     padding: 6px 15px;
     margin-top: 10px;
