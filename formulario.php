@@ -1,4 +1,5 @@
 <?php
+
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $edad = $_POST['edad'];
@@ -16,10 +17,10 @@ if(!empty($nombre) || !empty($apellido) || !empty($genero) ||
 
     $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
     if(mysqli_connect_error()){
-       die('Error de Conexion'(mysqli_connect_errorno().')'.mysqli_connect_error());
+       die('error de conexion('.mysqli_connect_errno().')'.myslqi_connect_error());
     }
     else{
-        $INSERT="INSERT INTO personas(nombre,apellido,edad,genero,bando,estado)
+        $INSERT="INSERT INTO persona(nombre,apellido,edad,genero,bando,estado)
         values(?,?,?,?,?,?)";
 
         $stmt = $conn->prepare($INSERT);
@@ -28,7 +29,9 @@ if(!empty($nombre) || !empty($apellido) || !empty($genero) ||
         echo "DATOS AGREGADOS CON EXITO.";
     }
     $stmt->close();
-
+    $conn->close();
 }
 
+//header("Location: formulario.html");
+//die();
 ?>
