@@ -40,6 +40,11 @@ input[type= "text" ]{
     padding: 10px 15dpx;
     box-sizing: border-box;
     margin-bottom: 8px;
+    color: black;
+}
+
+::placeholder { 
+    color: rgb(55, 52, 56);
 }
 
 input[type= "radio" ]{
