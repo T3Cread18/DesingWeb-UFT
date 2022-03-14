@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lista victimas</title>
         <link href="css/style-index.css" rel="stylesheet">
+        <link href="css/listado.css" rel="stylesheet">
     </head>
     <body>
 <div class="nav-bg">
@@ -13,6 +14,7 @@
         <a href="formulario.html">Añadir Víctima</a>
         <a href="ver_lista.php">Ver lista completa</a>
         <a href="#">Desaparecidos</a>
+        
     </nav>
 </div>
             <?php
@@ -20,8 +22,8 @@
             ?>
          <table>
              <tr><th colspan="6">
-                 <h1>Listado de hombres caídos en batalla</h1></th></tr>
-            <tr>
+                 <h1 class="l1">Listado de hombres caídos en batalla</h1></th></tr>
+            <tr class="titulos">
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
@@ -31,13 +33,14 @@
                 <th>Estado</th>
             </tr>
 
+
             <?php
                 $sql="select * from personas";
                 $resultado=mysqli_query($conn,$sql);
                 while($mostrar=mysqli_fetch_array ($resultado))
                     {
             ?>
-                    <tr>
+                    <tr class="datos">
                         <td><?php echo $mostrar['id']?></td>
                         <td><?php echo $mostrar['nombre']?></td>
                         <td><?php echo $mostrar['apellido']?></td>
