@@ -9,32 +9,21 @@ $genero = $_POST['genero'];
 $bando = $_POST['bando'];
 $estado = $_POST['estado'];
 
-$actualizar =$_POST['actualizar'];
-
-
-
 if (!empty($nombre) || !empty($apellido) || !empty($genero) ||
     !empty($edad) || !empty($bando) || !empty($estado)){
 
-    if (mysqli_connect_error()) {
-        die("Error de conexión: " . $conn->connect_error);
-    }else{
-        
-        $INSERT = "INSERT INTO persona(nombre,apellido,edad,genero,bando,estado)
-        values(?,?,?,?,?,?)";
+    
+    $sql = "INSERT INTO persona(nombre,apellido,edad,genero,bando,estado)
+    values('$nombre','$apellido',$edad,'$genero','$bando','$estado')";
 
-        $stmt = $conn->prepare($INSERT);
-        $stmt->bind_param("ssisss", $nombre, $apellido, $edad, $genero, $bando, $estado);
-        $stmt->execute();
-
-        echo "<script>if(confirm('DATOS AGREGADOS CON EXITO')){document.location.href='ver_lista.php'};</script>";
-        
-    }
-    $stmt->close();
-    $conn->close();
+if ($conn->query($sql)===TRUE) {
+       echo "<script>if(confirm('DATOS AGREGADOS CON EXITO')){document.location.href='ver_lista.php'};</script>";
+} else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+}
+$conn->close();
 }else{
     echo "FALTAN DATOS OBLIGATORIOS";
     $conn->close();
 }
-
 ?>
