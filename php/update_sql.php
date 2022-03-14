@@ -20,7 +20,7 @@ if(!empty($nombre) || !empty($apellido) || !empty($genero) ||
         $result=mysqli_query($conn, $sql);
     
         if($result){
-            echo "<script>if(confirm('ACTUALIZADO CON EXITO')){document.location.href='ver_lista.php'};</script>";
+            echo "<script>if(confirm('ACTUALIZADO CON EXITO')){document.location.href='../ver_lista.php'};</script>";
         }else{
             die("Error de conexión: " . $conn->connect_error);
         }

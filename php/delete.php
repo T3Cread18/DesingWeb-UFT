@@ -9,11 +9,10 @@ if(isset($_GET['id'])){
     $result=mysqli_query($conn, $sql);
 
     if($result){
-       header('location: /proyecto/ver_lista.php');
+       header('location: ../ver_lista.php');
     }else{
         die("Error de conexión: " . $conn->connect_error);
     }
 }
-
 
 ?>

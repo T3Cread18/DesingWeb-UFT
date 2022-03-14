@@ -4,8 +4,10 @@
     $dbpassword = "";
     $dbname = "cuerpos";
 
-    $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+    $conn = mysqli_connect($host, $dbusername, $dbpassword, $dbname);
     if(mysqli_connect_error()){
-        die("Connection failed: " . $conn->connect_error);
+        die("Error de Conexion: " . $conn->connect_error);
     }
+    
+echo "Conexion Exitosa";
 ?>

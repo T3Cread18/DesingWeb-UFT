@@ -11,11 +11,9 @@
     <body>
 <div class="nav-bg">
     <nav class="navegacion-principal contenedor">
-        <a href="index.html">Inicio</a>
-        <a href="formulario.html">Añadir Víctima</a>
-        <a href="ver_lista.php">Ver lista completa</a>
-        <a href="#">Desaparecidos</a>
-        
+        <a href="../index.html">Inicio</a>
+        <a href="../formulario.html">Añadir Víctima</a>
+        <a href="../ver_lista.php">Ver lista completa</a>
     </nav>
 </div>
 
@@ -110,9 +108,6 @@ if(isset($_GET['id'])){
         die("Error de conexión: " . $conn->connect_error);
     }
 }
-
-
 ?>
-
 </body>
 </html>
