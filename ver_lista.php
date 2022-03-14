@@ -4,8 +4,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lista victimas</title>
+        <link href="css/style-index.css" rel="stylesheet">
     </head>
     <body>
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="formulario.html">Añadir Víctima</a>
+        <a href="ver_lista.php">Ver lista completa</a>
+        <a href="#">Desaparecidos</a>
+    </nav>
+</div>
             <?php
                 include('php/conectar.php');
             ?>

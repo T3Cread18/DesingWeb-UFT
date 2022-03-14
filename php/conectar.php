@@ -8,7 +8,4 @@
     if(mysqli_connect_error()){
        die('error de conexion('.mysqli_connect_errno().')'.myslqi_connect_error());
     }
-    else{
-        echo "Conectada.";
-    }
 ?>
