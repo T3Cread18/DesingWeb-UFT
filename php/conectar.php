@@ -2,10 +2,10 @@
     $host = "localhost";
     $dbusername = "root";
     $dbpassword = "";
-    $dbname = "proyecto";
+    $dbname = "cuerpos";
 
     $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
     if(mysqli_connect_error()){
-       die('error de conexion('.mysqli_connect_errno().')'.myslqi_connect_error());
+        die("Connection failed: " . $conn->connect_error);
     }
 ?>

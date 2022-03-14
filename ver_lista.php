@@ -35,24 +35,44 @@
 
 
             <?php
-                $sql="select * from personas";
+                $sql="select * from persona";
                 $resultado=mysqli_query($conn,$sql);
-                while($mostrar=mysqli_fetch_array ($resultado))
-                    {
-            ?>
-                    <tr class="datos">
-                        <td><?php echo $mostrar['id']?></td>
-                        <td><?php echo $mostrar['nombre']?></td>
-                        <td><?php echo $mostrar['apellido']?></td>
-                        <td><?php echo $mostrar['edad']?></td>
-                        <td><?php echo $mostrar['genero']?></td>
-                        <td><?php echo $mostrar['bando']?></td>
-                        <td><?php echo $mostrar['estado']?></td>
-                        <td><?php echo "<a href='php/recibir.php?id=".$mostrar['id']."&nombre=".$mostrar['nombre']."'>Agregar</a>"?></td>
-                    </tr>
-            <?php
-                    }
-            ?>
+                while($mostrar=mysqli_fetch_array ($resultado)){
+
+                    $id=$mostrar['id'];
+                    $nombre=$mostrar['nombre'];
+                    $apellido=$mostrar['apellido'];
+                    $edad=$mostrar['edad'];
+                    $genero=$mostrar['genero'];
+                    $bando=$mostrar['bando'];
+                    $estado=$mostrar['estado'];
+
+                    echo 
+                    '<tr class="datos">
+                    <td>'.$id.'</td>
+                    <td>'.$nombre.'</td>
+                    <td>'.$apellido.'</td>
+                    <td>'.$edad.'</td>
+                    <td>'.$genero.'</td>
+                    <td>'.$bando.'</td>
+                    <td>'.$estado.'</td>
+                    
+                    <td>
+                    <button class="btn btn-primary">
+                    <a href="php/actualizar.php?id='.$id.'">Actualizar</a>
+                    </button>
+                    </td>
+
+                    <td>
+                    <button class="btn btn-danger">
+                    <a href="php/delete.php?id='.$id.'">Borrar</a>
+                    </button>
+                    </td>
+                
+                    </tr>';
+    
+                }
+            ?>        
             </table>
     </body>
 </html>
